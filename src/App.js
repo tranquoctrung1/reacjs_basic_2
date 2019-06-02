@@ -2,8 +2,15 @@ import React, {Component} from 'react';
 import './App.css';
 
 import Accordion from './components/Accordion.js';
-import Counter from './components/Counter.js'
+import Counter from './components/Counter.js';
+import SongInfor from './components/songinfor';
 
+const songinfor = {
+  id: '01',
+  name: 'Đừng yêu ai em nhé',
+  singer: 'Cao Nam Thành',
+  countingviewer: 3000
+}
 class App extends Component {
   constructor(props)
   {
@@ -19,6 +26,7 @@ class App extends Component {
     }
 
     this.RemoveCounter = this.RemoveCounter.bind(this)
+
   };
   
   componentDidMount() {
@@ -51,6 +59,8 @@ class App extends Component {
 
         {this.state.showCounter &&  <Counter/>}
         <button onClick={this.RemoveCounter}> Xóa Counter </button>
+
+        <SongInfor song={songinfor}/>
       </div>
     );
   }
