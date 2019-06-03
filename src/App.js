@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Accordion from './components/Accordion.js';
 import Counter from './components/Counter.js';
@@ -51,7 +52,6 @@ class App extends Component {
         <Accordion heading="Heading" ref={this.accordion}>
           <p >{`this is demo for children props`}</p>
         </Accordion>
-
         {/* lấy thằng tag nào thì đặt ref vào đó */}
         <input type="text" placeholder="Enter" ref={this.inputElement}></input>
         {/* eslint-disable-next-line */}
